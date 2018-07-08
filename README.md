@@ -8,12 +8,12 @@
 
 ### Code Example
 
-'''Ruby
+'''ruby
 def my_great_method
   puts "here it is "
 end
 '''
 
 '''javascript
-alert('Hello Friend!')
+alert('Hello Friend!');
 '''
