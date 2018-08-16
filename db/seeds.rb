@@ -14,7 +14,8 @@
        phải chỉnh sửa và thay thế. , quis nostrum tập thể dục
        ullam corporis suscipit laboriosam, trong đó có thể
        được sử dụng trong các quy tắc của bạn.vel illum qui
-       dolorem eum fugiat quo voluptas nulla pariatur? "
+       dolorem eum fugiat quo voluptas nulla pariatur? ",
+    status: 0
   )
 end
 puts "10 blog post created "
