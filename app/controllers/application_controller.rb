@@ -3,4 +3,6 @@ class ApplicationController < ActionController::Base
   include DeviseWhilelist
   include SetSource
   include CurrentUserConcern
+  include DefaultPageContent
+
 end
