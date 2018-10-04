@@ -6,6 +6,10 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body
   belongs_to :topic, optional: true
+  def self.special_blogs
+    all
+  end
+
 end
 #dùng để push
 #git push -f origin master
