@@ -40,7 +40,10 @@ class PortfoliosController < ApplicationController
 end
 
   def show
+<<<<<<< HEAD
     @portfolio_item = Portfolio.find(params[:id])
+=======
+>>>>>>> rubygem
   end
 
   def destroy
