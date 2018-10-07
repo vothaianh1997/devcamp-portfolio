@@ -16,6 +16,6 @@ module ApplicationHelper
      end
   end
   def copyright_generator
-    DevcampViewTool::Renderer.copyright 'Vo Thai Anh', 'All right reserved'
+    VtaViewTool::Renderer.copyright 'Vo Thai Anh', 'All right reserved'
   end
 end
