@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
-  layout 'portfolio'
+  layout "portfolio"
+
   def index
     @portfolio_item = Portfolio.all
   end
@@ -25,6 +26,7 @@ class PortfoliosController < ApplicationController
 
   def edit
     @portfolio_item = Portfolio.find(params[:id])
+
   end
 
   def update
@@ -40,10 +42,8 @@ class PortfoliosController < ApplicationController
 end
 
   def show
-<<<<<<< HEAD
     @portfolio_item = Portfolio.find(params[:id])
-=======
->>>>>>> rubygem
+
   end
 
   def destroy
@@ -57,7 +57,10 @@ end
       format.html { redirect_to portfolios_url, notice: 'Blog was successfully destroyed.' }
     end
   end
-  private
+
+  def set_portfolio_item
+   @portfolio_item = Portfolio.find(params[:id])
+  end
   def portfolio_params
     params.require(:portfolio).permit(:title,:subtitle,:body,:image, technologies_attributes: [:name])
   end
