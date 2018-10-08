@@ -1,5 +1,7 @@
 class PortfoliosController < ApplicationController
-  layout "portfolio"
+  before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
+  layout 'portfolio'
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
   def index
     @portfolio_item = Portfolio.all
@@ -25,8 +27,6 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
-
   end
 
   def update
@@ -42,8 +42,6 @@ class PortfoliosController < ApplicationController
 end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
-
   end
 
   def destroy
@@ -57,7 +55,7 @@ end
       format.html { redirect_to portfolios_url, notice: 'Blog was successfully destroyed.' }
     end
   end
-
+  private
   def set_portfolio_item
    @portfolio_item = Portfolio.find(params[:id])
   end
