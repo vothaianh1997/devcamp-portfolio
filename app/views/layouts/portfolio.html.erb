@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title%></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>"/>
+    <link rel="icon" href="../../favicon.ico">
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+
+    <!--start to navigation-->
+    <%= render 'shared/portfolio_nav'%>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Album example</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+        <p>
+          <a href="#" class="btn btn-primary">Main call to action</a>
+          <a href="#" class="btn btn-secondary">Secondary action</a>
+        </p>
+      </div>
+    </section>
+    <!--end to navigation-->
+
+    <!-- start of masthead-->
+
+    <!-- start of masthead-->
 
     <%= render "shared/nav", location: 'top'%>
 
