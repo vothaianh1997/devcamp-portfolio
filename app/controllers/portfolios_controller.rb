@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
   def index
-    @portfolio_item = Portfolio.by_position
+    @portfolio_items = Portfolio.by_position
   end
 
   def sort
@@ -65,6 +65,6 @@ class PortfoliosController < ApplicationController
    @portfolio_item = Portfolio.find(params[:id])
   end
   def portfolio_params
-    params.require(:portfolio).permit(:title,:subtitle,:body,:image, technologies_attributes: [:name])
+    params.require(:portfolio).permit(:title,:subtitle,:body,:main_image,:thumb_image, technologies_attributes: [:name])
   end
 end
